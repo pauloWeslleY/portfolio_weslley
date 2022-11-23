@@ -1,0 +1,10 @@
+.hero__header {
+   display: flex;
+   flex-direction: row;
+   flex-wrap: wrap;
+   padding-block: 9git rem;
+
+   .hero__header_box {
+      flex: 1 1 45rem;
+   }
+}

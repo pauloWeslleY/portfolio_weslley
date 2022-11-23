@@ -1,0 +1,58 @@
+//!<| === === === === BtnBackToTop === === === === |>
+.btn {
+   z-index: 100;
+
+   outline: none;
+   border: none;
+
+   position: fixed;
+   right: 1rem;
+   bottom: 1rem;
+
+   font-size: 3.5rem;
+   line-height: 0;
+
+   padding: 0.5rem;
+   animation: pulse 1.5s linear infinite;
+
+   .hidden {
+      visibility: hidden;
+      opacity: 0;
+      transform: translateY(100%);
+   }
+
+   .show {
+      background: var(--blue-100);
+      color: var(--blue-900);
+
+      padding: 0.3rem;
+      clip-path: circle();
+
+      visibility: visible;
+      opacity: 1;
+      transform: translateY(0);
+      transition: all 0.5s ease;
+
+      &:hover {
+         filter: brightness(0.9);
+         color: var(--gray-100);
+         transform: scale(115%);
+      }
+   }
+}
+
+@keyframes pulse {
+   0% {
+      transform: scale(1.1);
+      opacity: 0;
+      filter: brightness(100%);
+   }
+   50% {
+      opacity: 1;
+   }
+   100% {
+      transform: scale(1.1);
+      opacity: 0;
+      filter: brightness(200%);
+   }
+}

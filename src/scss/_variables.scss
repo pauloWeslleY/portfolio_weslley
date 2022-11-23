@@ -1,0 +1,79 @@
+:root {
+	font-size: 62.5%;
+
+	--blue-900: #011628;
+	--blue-800: #1a355b;
+	--blue-700: #1a1a2e;
+	--blue-600: #14213e;
+	--blue-500: #0d1c2b;
+	--blue-400: #1b273b;
+	--blue-300: #195394;
+	--blue-200: #2c5281;
+	--blue-100: #00b7ff;
+	--blue-80: #0e1c26;
+	--blue-70: #0c1821;
+	--blue-60: #0d1e28;
+	--blue-50: #0c2538;
+	--blue-40: #197891;
+	--blue-30: #8bd3e1;
+	--blue-20: #58a4b4;
+	--blue-10: #bee3f8;
+
+	--green-10: #2dc854;
+
+	--red-900: #7a0000;
+	--red-800: #bf121d;
+	--red-700: #d70427;
+	--red-600: #63171b;
+	--red-500: #822727;
+	--red-400: #9b2c2c;
+	--red-300: #c53030;
+	--red-200: #e53e3e;
+	--red-100: #f56666;
+	--red-20: #e40c0f;
+	--red-10: #d31410;
+
+	--gray-10: #13232c;
+	--gray-20: #778da9;
+	--gray-30: #415a77;
+	--gray-50: #f8fafc;
+	--gray-100: #edf2f7;
+	--gray-200: #e1e7ef;
+	--gray-300: #ccd6e0;
+	--gray-400: #a0aec0;
+	--gray-500: #728197;
+	--gray-600: #4a5568;
+	--gray-700: #2d3748;
+	--gray-800: #1a212d;
+	--gray-900: #161822;
+	--gray-1000: #293242;
+	--gray-2000: #7a7f7d;
+
+	--white-50: rgba(255, 255, 255, 0.137);
+	--white-100: #e6e6e6;
+	--white-150: #dfe3e7;
+	--white-200: #dfe0dc;
+	--white-300: rgba(201, 201, 201, 0.781);
+	--white-400: #d0dcd6;
+
+	--black: #000000;
+
+	//* Colors Languanges
+	--html: #de2e02;
+	--css: #1b73bb;
+	--javascript: #f7dd1d;
+	--sass: #cc6699;
+	--bootstrap: #6e43a3;
+	--materialize: #ed6e74;
+	--react: #61dbfa;
+	--chakra: #66cacc;
+	--typescript: #007acc;
+	--git: #f14f32;
+	--vite: #8e6bff;
+	--firebase: #e87b1e;
+	--next: #70798c;
+
+	//*Toggle Colors Mode
+	--bg-dark: #0e1c26;
+	--bg-light: #d0dcd6;
+}
