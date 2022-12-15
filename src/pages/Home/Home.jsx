@@ -35,7 +35,7 @@ export default function Home() {
 					title={'Olá, Eu sou'}
 					name={'Weslley de Lima'}
 					description={
-						'Desenvolvedor Web Front End Jr - HTML5 - CSS3 - SCSS - JavaScript - TypeScript - Bootstrap - ReactJs'
+						'Desenvolvedor Web Front End Jr - HTML5 - CSS3 - SCSS - JavaScript - TypeScript - Bootstrap - ReactJs - Chakra-UI'
 					}
 					button_title={'Saiba Mais'}
 				/>

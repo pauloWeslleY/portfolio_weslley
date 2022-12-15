@@ -5,7 +5,7 @@ export const getButtonsList = () =>
 	CONTACT_BUTTONS.map(btnProps => (
 		<ButtonsList
 			key={btnProps.id}
-			arial={btnProps.name_label}
+			label={btnProps.label}
 			name={btnProps.name}
 			icons={btnProps.icon}
 			link={btnProps.link}
@@ -13,15 +13,13 @@ export const getButtonsList = () =>
 		/>
 	));
 
-const ButtonsList = ({ name, icons, link, btn_color, arial }) => {
+const ButtonsList = ({ name, icons, link, btn_color, label }) => {
 	const { THEME } = useColors();
 
 	return (
 		<Button
-			arial-label={'Button'}
-			// w={"25rem"}
 			role={'button'}
-			aria-label={arial}
+			arial-label={label}
 			leftIcon={icons}
 			size={'lg'}
 			fontSize={'1.6rem'}

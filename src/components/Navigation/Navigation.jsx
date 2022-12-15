@@ -5,12 +5,12 @@ import { SideNav, getMenuItems } from './index';
 
 export const Navigation = () => {
 	const ref = useRef();
-	const [y, setY] = useState(300);
+	const [isY, setIsY] = useState(300);
 	const { height = 300 } = ref.current ? ref.current.getBoundingClientRect() : 0;
 	const { scrollY } = useScroll();
 
-	const TOGGLE_BG = y > height ? 'blue.70' : 'transparent';
-	const TOGGLE_TITLE_COLORS = y > height ? 'white.200' : 'gray.500';
+	const TOGGLE_BG = isY > height ? 'blue.70' : 'transparent';
+	const TOGGLE_TITLE_COLORS = isY > height ? 'white.200' : 'gray.500';
 
 	const titles = {
 		name: 'Weslley',
@@ -18,14 +18,14 @@ export const Navigation = () => {
 	};
 
 	useEffect(() => {
-		return scrollY.onChange(() => setY(scrollY.get()));
+		return scrollY.onChange(() => setIsY(scrollY.get()));
 	}, [scrollY]);
 
 	return (
 		<chakra.header
 			ref={ref}
-			shadow={y < height ? 'none' : 'dark-lg'}
-			bg={y > height ? 'white.200' : 'transparent'}
+			shadow={isY < height ? 'none' : 'md'}
+			bg={isY > height ? 'white.200' : 'transparent'}
 			transition={'all 0.5s ease-in-out'}
 			_dark={{
 				color: TOGGLE_TITLE_COLORS,

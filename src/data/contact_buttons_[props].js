@@ -5,7 +5,7 @@ import { BsWhatsapp, BsGithub, BsLinkedin } from "react-icons/bs";
 export const CONTACT_BUTTONS = [
    {
       id: 1,
-      name_label: "Ícone do Instagram",
+      label: "Ícone do Instagram",
       name: "Instagram",
       color: "red.200",
       icon: <FiInstagram />,
@@ -13,7 +13,7 @@ export const CONTACT_BUTTONS = [
    },
    {
       id: 2,
-      name_label: "Ícone do WhatsApp",
+      label: "Ícone do WhatsApp",
       name: "WhatsApp",
       color: "green.50",
       icon: <BsWhatsapp />,
@@ -21,7 +21,7 @@ export const CONTACT_BUTTONS = [
    },
    {
       id: 3,
-      name_label: "Ícone do Linkedin",
+      label: "Ícone do Linkedin",
       name: "Linkedin",
       color: "blue.300",
       icon: <BsLinkedin />,
@@ -29,7 +29,7 @@ export const CONTACT_BUTTONS = [
    },
    {
       id: 4,
-      name_label: "Ícone do GitHub",
+      label: "Ícone do GitHub",
       name: "GitHub",
       color: "gray.500",
       icon: <BsGithub />,

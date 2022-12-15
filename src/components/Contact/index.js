@@ -1,6 +1,4 @@
 import Contact from "./Contact";
-import ContactList from "./ContactList";
-import ContactItem from "./ContactItem";
 import ContactBox from "./ContactBox";
 import { getButtonsList } from "./ButtonsList";
 
@@ -14,8 +12,6 @@ import { CONTACT_BUTTONS } from "./../../data/contact_buttons_[props]";
 
 export {
    Contact,
-   ContactList,
-   ContactItem,
    ContactBox,
    getButtonsList,
    HeadTitle,

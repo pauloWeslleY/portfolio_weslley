@@ -27,8 +27,8 @@ export const ABOUT = {
          site pra uma clínica de <strong>Acupuntura</strong> e do site de uma{" "}
          <strong>Serralheria</strong>, possuo conhecimentos básicos em:
          HTML5, CSS3, SASS, SCSS, JavaScript, TypeScript, Bootstrap,
-         Materialize, Git e GitHub, ReactJS. Tenho interesse em aprender
-         back-end, e melhores práticas de desenvolvimento.
+         Materialize, Git e GitHub, ReactJS e Chakra-UI. Tenho interesse em aprender
+         Back-end, e melhores práticas de desenvolvimento.
       </chakra.p>
    ),
 }
