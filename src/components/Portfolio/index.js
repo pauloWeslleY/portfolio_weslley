@@ -8,6 +8,7 @@ import { PORTFOLIO } from "../../data/portfolio_[props]";
 import { HeadTitle } from "../HeadTitle";
 import { Wrapper } from "../Wrapper";
 import { Btn } from "../Buttons/Btn";
+import { BtnHead } from "../Buttons/BtnHead";
 
 import { useColors } from "../../hooks/useColors";
 import { ScrollReveal } from "../../hooks/useScrollReveal";
@@ -22,6 +23,7 @@ export {
    PORTFOLIO,
    PortfolioModal,
    Btn,
+   BtnHead,
    useColors,
    ScrollReveal
 };

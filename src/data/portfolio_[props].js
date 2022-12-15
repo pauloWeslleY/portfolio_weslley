@@ -1,10 +1,8 @@
-import {HStack} from "@chakra-ui/react"
-
+import { HStack } from "@chakra-ui/react"
 import { DiHtml5, DiCss3, DiSass, DiMaterializecss } from "react-icons/di";
 import { BsBootstrapFill } from "react-icons/bs";
 import { FaReact, FaGitAlt, FaNodeJs } from "react-icons/fa";
 import {
-   SiPhp,
    SiJavascript,
    SiJquery,
    SiPrisma,
@@ -20,23 +18,23 @@ import {
 
 export const PORTFOLIO = [
    {
-      image: "/images/acupuntura.jpg",
+      image: "/images/acupuncture.png",
       title: "Clínica",
       name: "Acupuntura",
       tech: "Tecnologias Utilizadas",
       techlist: (
          <HStack fontSize="2.5rem">
-            <SiPhp color="var(--blue-300)" />
+            <SiVite color="var(--vite)" />
+            <FaReact color="var(--react)" />
+            <SiTypescript color="var(--typescript)" />
+            <SiChakraui color="var(--chakra)" />
             <DiSass color="var(--sass)" />
-            <SiJavascript color="var(--javascript)"/>
-            <SiJquery color="var(--blue-300)"/>
-            <BsBootstrapFill color="var(--bootstrap)" />
             <FaGitAlt color="var(--git)"/>
          </HStack>
       ),
       git: "GitHub",
       live: "Live Preview",
-      link: "https://draacupuntura.000webhostapp.com/"
+      link: "https://dra-acupuntura.vercel.app"
    },
    {
       image: "/images/serralheria.png",
@@ -64,7 +62,7 @@ export const PORTFOLIO = [
       tech: "Tecnologias Utilizadas",
       techlist: (
          <HStack fontSize={{xs: "2rem", md: "2.5rem"}}>
-             <SiVite color="var(--vite)" />
+            <SiVite color="var(--vite)" />
             <FaReact color="var(--react)" />
             <SiTypescript color="var(--typescript)" />
             <SiChakraui color="var(--chakra)" />
@@ -287,7 +285,7 @@ export const PORTFOLIO = [
       ),
       git: "GitHub",
       live: "Live Preview",
-      link: "https://weslleywebdeveloper.vercel.app"
+      link: "https://weslleywebdesign.vercel.app"
    },
    {
       image: "https://camo.githubusercontent.com/1994b4521e0baafc06a1b96b4bef280448330e5d062e9f108e35f73bcde148b8/68747470733a2f2f666972656261736573746f726167652e676f6f676c65617069732e636f6d2f76302f622f68636f64652d636f6d2d62722e61707073706f742e636f6d2f6f2f44726f70426f78436c6f6e652e6a70673f616c743d6d6564696126746f6b656e3d64353963616430632d343430642d343531362d383866322d646139303462396262343433",
