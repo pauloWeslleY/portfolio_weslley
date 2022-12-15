@@ -13,7 +13,7 @@ export const Header = ({ title, name, description }) => {
 					fontWeight={'extrabold'}
 					fontSize={{
 						base: '3.5rem',
-						sm: '5.5rem',
+						sm: '6rem',
 					}}
 					as={'h2'}
 				>
