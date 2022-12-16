@@ -4,11 +4,12 @@ import {
 	Heading,
 	IconButton,
 	Spacer,
+	Switch,
+	VStack,
 	useColorMode,
 	useColorModeValue,
-	VStack,
 } from '@chakra-ui/react';
-import { FaGithub, FaInstagram, FaLinkedin, FaSun, FaMoon } from 'react-icons/fa';
+import { FaGithub, FaInstagram, FaLinkedin } from 'react-icons/fa';
 
 export const NavMenu = ({ title }) => {
 	const { colorMode, toggleColorMode } = useColorMode();
@@ -67,7 +68,7 @@ export const NavMenu = ({ title }) => {
 		<VStack p={5}>
 			<Flex w={'100%'} alignItems={'center'}>
 				<Heading
-					ml={'8'}
+					ml={8}
 					size={'md'}
 					fontWeight={'semibold'}
 					color={title_colors}
@@ -79,7 +80,7 @@ export const NavMenu = ({ title }) => {
 				</Heading>
 				<Spacer></Spacer>
 				{NavIcon()}
-				<IconButton
+				{/* <IconButton
 					aria-label={'Ícone que mudar as cores da Página'}
 					ml={8}
 					icon={isDark ? <FaSun /> : <FaMoon />}
@@ -93,6 +94,12 @@ export const NavMenu = ({ title }) => {
 						transform: 'translateY(-2px)',
 						boxShadow: 'dark-lg',
 					}}
+				/> */}
+				<Switch
+					size={'lg'}
+					colorScheme={'cyan'}
+					isChecked={isDark}
+					onChange={toggleColorMode}
 				/>
 			</Flex>
 		</VStack>
