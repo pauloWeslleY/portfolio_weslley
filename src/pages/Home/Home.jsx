@@ -14,7 +14,7 @@ import { ButtonTop } from '../../components/ButtonToTop';
 import { ScrollReveal } from '../../hooks/useScrollReveal';
 
 export default function Home() {
-	const [data, setData] = useState();
+	const [isData, setData] = useState();
 
 	useEffect(() => {
 		axios
@@ -23,7 +23,7 @@ export default function Home() {
 			.then(data => setData(data));
 	}, []);
 
-	console.log('home:', data);
+	console.log(isData);
 
 	return (
 		<main>
