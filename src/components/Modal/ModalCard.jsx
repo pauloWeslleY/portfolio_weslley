@@ -24,7 +24,7 @@ export const ModalCard = props => {
 		>
 			<ModalOverlay />
 			<ModalContent bg={bgColor} maxW={'4xl'}>
-				<ModalHeader fontSize="2.5rem">{name}</ModalHeader>
+				<ModalHeader fontSize={'2.5rem'}>{name}</ModalHeader>
 
 				<ModalBody>
 					<Box

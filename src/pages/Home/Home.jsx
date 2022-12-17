@@ -25,19 +25,37 @@ export default function Home() {
 
 	console.log('home:', data);
 
+	const content = {
+		title: data?.content.title,
+		name_title: data?.content.name_title,
+		name: data?.content.name,
+		description: data?.content.description,
+		btn_title: data?.content.btn_title,
+		portfolio: data?.content.project,
+		projects_recent: data?.content.projects_recent,
+		subtitle: data?.content.subtitle,
+		skills: data?.content.skills,
+		about: data?.content.about,
+		contact: data?.content.contact,
+	};
+
+	const footer = {
+		title: data?.footer.title,
+		label: data?.footer.label,
+		subtitle: data?.footer.subtitle,
+	};
+
 	return (
 		<main>
 			<header>
 				<ScrollReveal>
-					<NavMenu title={'Portfolio'} />
+					<NavMenu title={content.title} />
 				</ScrollReveal>
 				<Head
-					title={'Olá, Eu sou'}
-					name={'Weslley de Lima'}
-					description={
-						'Desenvolvedor Web Front End Jr - HTML5 - CSS3 - SCSS - JavaScript - TypeScript - Bootstrap - ReactJs - Chakra-UI'
-					}
-					button_title={'Saiba Mais'}
+					title={content.name_title}
+					name={content.name}
+					description={content.description}
+					button_title={content.btn_title}
 				/>
 			</header>
 
@@ -49,10 +67,10 @@ export default function Home() {
 
 			<section>
 				<Social />
-				<Portfolio title={'Projetos'} subtitle={'Recentes'} />
-				<Skills title={'Minhas Skills'} />
-				<About title={'Sobre Mim'} />
-				<Contact title={'Entre em Contatos'} />
+				<Portfolio title={content.portfolio} subtitle={content.projects_recent} />
+				<Skills title={content.skills} />
+				<About title={content.about} />
+				<Contact title={content.contact} />
 			</section>
 
 			<Divider
@@ -63,11 +81,9 @@ export default function Home() {
 
 			<footer>
 				<Footer
-					title_footer={'Created by'}
-					name_link={'Weslley Lima'}
-					subtitle_footer={
-						'© copyright 2022. Paulo Weslley de Lima Firmino - Todos os Direitos Reservados.'
-					}
+					title_footer={footer.title}
+					name_link={footer.label}
+					subtitle_footer={footer.subtitle}
 				/>
 			</footer>
 			<ButtonTop />
