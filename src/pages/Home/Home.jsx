@@ -26,23 +26,23 @@ export default function Home() {
 	console.log(isData);
 
 	const content = {
-		title: data?.content.title,
-		name_title: data?.content.name_title,
-		name: data?.content.name,
-		description: data?.content.description,
-		btn_title: data?.content.btn_title,
-		portfolio: data?.content.project,
-		projects_recent: data?.content.projects_recent,
-		subtitle: data?.content.subtitle,
-		skills: data?.content.skills,
-		about: data?.content.about,
-		contact: data?.content.contact,
+		title: isData?.content.title,
+		name_title: isData?.content.name_title,
+		name: isData?.content.name,
+		description: isData?.content.description,
+		btn_title: isData?.content.btn_title,
+		portfolio: isData?.content.project,
+		projects_recent: isData?.content.projects_recent,
+		subtitle: isData?.content.subtitle,
+		skills: isData?.content.skills,
+		about: isData?.content.about,
+		contact: isData?.content.contact,
 	};
 
 	const footer = {
-		title: data?.footer.title,
-		label: data?.footer.label,
-		subtitle: data?.footer.subtitle,
+		title: isData?.footer.title,
+		label: isData?.footer.label,
+		subtitle: isData?.footer.subtitle,
 	};
 
 	return (
