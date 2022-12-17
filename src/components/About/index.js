@@ -6,7 +6,7 @@ import AboutParagraph from "./AboutParagraph"
 import { HeadTitle } from "./../HeadTitle";
 import { Wrapper } from "../Wrapper";
 
-import { ABOUT } from "../../data/about_[props]";
+
 
 import { ScrollReveal } from "./../../hooks/useScrollReveal";
 import { useColors } from "./../../hooks/useColors";
@@ -18,7 +18,7 @@ export {
    AboutParagraph,
    HeadTitle,
    Wrapper,
-   ABOUT,
+
    ScrollReveal,
    useColors
 };
