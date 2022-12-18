@@ -93,7 +93,7 @@ export const SideNav = ({ name, lastName }) => {
 					</DrawerHeader>
 					<DrawerBody
 						color={THEME.SIDE_NAV_COLOR}
-						bgGradient={'linear(to-b, cyan.100, cyan.300, white_lighten.100)'}
+						bgGradient={'linear(to-b, cyan.100, cyan.300, white.100)'}
 						_dark={{
 							bgGradient: 'linear(to-b, blue.900, blue.500, cyan.800)',
 						}}
