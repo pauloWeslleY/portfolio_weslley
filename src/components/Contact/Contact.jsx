@@ -8,10 +8,11 @@ export const Contact = ({ title }) => {
 
 	return (
 		<Container maxW={'1545px'}>
-			<Flex id={'contact'} py={'11rem'} direction={isNotSmallerScreen ? 'row' : 'column'}>
+			<Flex id={'contact'} py={'3rem'} direction={isNotSmallerScreen ? 'row' : 'column'}>
 				<ScrollReveal>
 					<HeadTitle title={title} />
 				</ScrollReveal>
+
 				<Wrapper>
 					<ScrollReveal>
 						<Flex

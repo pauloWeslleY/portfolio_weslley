@@ -14,7 +14,7 @@ import { FaGithub, FaInstagram, FaLinkedin } from 'react-icons/fa';
 export const NavMenu = ({ title }) => {
 	const { colorMode, toggleColorMode } = useColorMode();
 	const isDark = colorMode === 'dark';
-	const title_colors = useColorModeValue('blue.600', 'blue.100');
+	const TITLE_MODE_COLORS = useColorModeValue('blue.600', 'blue.100');
 
 	const ICON_PROPS = [
 		{
@@ -71,7 +71,7 @@ export const NavMenu = ({ title }) => {
 					ml={8}
 					size={'md'}
 					fontWeight={'semibold'}
-					color={title_colors}
+					color={TITLE_MODE_COLORS}
 					_dark={{
 						color: 'blue.100',
 					}}
@@ -80,21 +80,6 @@ export const NavMenu = ({ title }) => {
 				</Heading>
 				<Spacer></Spacer>
 				{NavIcon()}
-				{/* <IconButton
-					aria-label={'Ícone que mudar as cores da Página'}
-					ml={8}
-					icon={isDark ? <FaSun /> : <FaMoon />}
-					isRound={true}
-					onClick={toggleColorMode}
-					variant={'ghost'}
-					size={'lg'}
-					fontSize={15}
-					transition={'all 0.5s ease-in'}
-					_hover={{
-						transform: 'translateY(-2px)',
-						boxShadow: 'dark-lg',
-					}}
-				/> */}
 				<Switch
 					size={'lg'}
 					colorScheme={'cyan'}

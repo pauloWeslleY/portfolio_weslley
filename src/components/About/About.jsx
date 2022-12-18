@@ -1,6 +1,7 @@
 import { memo, useEffect, useState } from 'react';
 import { Container, Flex, useMediaQuery } from '@chakra-ui/react';
 import axios from 'axios';
+
 import {
 	AboutContent,
 	AboutProfile,
@@ -11,38 +12,32 @@ import {
 	ABOUT_PROPS,
 } from './index';
 
-import styles from './About.module.scss';
-
 export const About = ({ title }) => {
-	const { THEME } = useColors();
 	const [isNotSmallerScreen] = useMediaQuery('min-width:(600px)');
 	const [data, setData] = useState();
 
+	const { THEME } = useColors();
+
 	useEffect(() => {
 		axios
-			.get('http://localhost:3333/')
+			.get('http://localhost:3333/about')
 			.then(response => response.data)
 			.then(data => setData(data));
 	}, []);
 
 	const about = {
-		name: data?.about_me.name,
-		title: data?.about_me.title,
-		job: data?.about_me.job,
-		avatar: data?.about_me.avatar,
-		image: data?.about_me.imageUrl,
-		description: data?.about_me.description,
-		description2: data?.about_me.description2,
-		description3: data?.about_me.description3,
+		name: data?.content.name,
+		title: data?.content.label,
+		work: data?.content.work,
+
+		description: data?.content.description,
+		description2: data?.content.description2,
+		description3: data?.content.description3,
 	};
 
 	return (
 		<Container maxW={'1545px'}>
-			<Flex
-				id={'about'}
-				className={styles.hero__about}
-				direction={isNotSmallerScreen ? 'row' : 'column'}
-			>
+			<Flex id={'about'} direction={isNotSmallerScreen ? 'row' : 'column'} py={'3rem'}>
 				<ScrollReveal>
 					<HeadTitle title={title} />
 				</ScrollReveal>
@@ -59,17 +54,16 @@ export const About = ({ title }) => {
 						>
 							<AboutContent
 								name={data ? about.name : ABOUT_PROPS.name}
-								img={'/images/paulo-wes.jpg'}
+								image={'/images/paulo-wes.jpg'}
 								description={data ? about.description : ABOUT_PROPS.description}
 								description2={data ? about.description2 : ABOUT_PROPS.description2}
 								description3={data ? about.description3 : ABOUT_PROPS.description3}
 							/>
 
 							<AboutProfile
-								name={data ? about.name : ABOUT_PROPS.name}
+								image={'/images/avatar_profile.jpg'}
 								title={data ? about.title : ABOUT_PROPS.title}
-								img={'/images/avatar_profile.jpg'}
-								job={data ? about.job : ABOUT_PROPS.job}
+								work={data ? about.work : ABOUT_PROPS.job}
 							/>
 						</Flex>
 					</ScrollReveal>

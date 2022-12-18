@@ -95,6 +95,9 @@ export const useColors = () => {
 		BTN_ICON_FOOTER_COLOR: useColorModeValue('gray.900', 'white.400'),
 		BTN_ICON_FOOTER_BG_HOVER_DARK: 'bg_dark',
 		BTN_ICON_FOOTER_BG_HOVER_LIGHT: 'bg_light',
+
+		//* BTN MODAL
+		BTN_MODAL_COLORS: useColorModeValue('blackAlpha.800', 'whiteAlpha.800'),
 	};
 
 	return { THEME };

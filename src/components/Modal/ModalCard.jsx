@@ -11,9 +11,11 @@ import {
 	Button,
 	Flex,
 } from '@chakra-ui/react';
+import { useColors } from '../../hooks/useColors';
 
 export const ModalCard = props => {
 	const { isOpen, onClose, bgColor, name, icon, description, exp } = props;
+	const { THEME } = useColors();
 
 	return (
 		<Modal
@@ -44,7 +46,7 @@ export const ModalCard = props => {
 					<Button
 						px={8}
 						bg={bgColor}
-						color={'blackAlpha.800'}
+						color={THEME.BTN_MODAL_COLORS}
 						rounded={'md'}
 						fontSize={'1.6rem'}
 						letterSpacing={1.5}
@@ -55,6 +57,8 @@ export const ModalCard = props => {
 							bg: 'blackAlpha.600',
 							color: 'whiteAlpha.800',
 						}}
+						_active={{ bg: 'transparent' }}
+						_focus={{ bg: 'transparent' }}
 						onClick={onClose}
 					>
 						Fechar

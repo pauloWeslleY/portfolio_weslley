@@ -46,7 +46,9 @@ export const Header = ({ title, name, description }) => {
 				</Heading>
 			</ScrollReveal>
 			<ScrollReveal>
-				<Text color={THEME.HEADER_DESCRIPTION_COLORS}>{description}</Text>
+				<Text as={'span'} color={THEME.HEADER_DESCRIPTION_COLORS}>
+					{description}
+				</Text>
 			</ScrollReveal>
 		</Flex>
 	);

@@ -40,9 +40,10 @@ export default function Home() {
 	};
 
 	const footer = {
-		title: isData?.footer.title,
 		label: isData?.footer.label,
-		subtitle: isData?.footer.subtitle,
+		name: isData?.footer.name,
+		sub_label: isData?.footer.sub_label,
+		link: isData?.footer.link,
 	};
 
 	return (
@@ -84,9 +85,10 @@ export default function Home() {
 
 			<footer>
 				<Footer
-					title_footer={isData ? footer.title : FOOTER_PROPS.title}
-					name_link={isData ? footer.label : FOOTER_PROPS.label}
-					subtitle_footer={isData ? footer.subtitle : FOOTER_PROPS.subtitle}
+					name={isData ? footer.name : FOOTER_PROPS.name}
+					label={isData ? footer.label : FOOTER_PROPS.label}
+					sub_label={isData ? footer.sub_label : FOOTER_PROPS.sub_label}
+					link={isData ? footer.link : FOOTER_PROPS.link}
 				/>
 			</footer>
 			<ButtonTop />

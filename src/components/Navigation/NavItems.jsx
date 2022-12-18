@@ -8,6 +8,7 @@ export const getMenuItems = () =>
 
 const NavItems = ({ name, to }) => {
 	const { THEME } = useColors();
+
 	return (
 		<Link activeClass={'active'} to={to} spy={true} smooth={true} offset={-10} duration={500}>
 			<Button

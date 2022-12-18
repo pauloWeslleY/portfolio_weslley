@@ -2,14 +2,14 @@ import { Button } from '@chakra-ui/react';
 import { CONTACT_BUTTONS, useColors } from './index';
 
 export const getButtonsList = () =>
-	CONTACT_BUTTONS.map(btnProps => (
+	CONTACT_BUTTONS.map(props => (
 		<ButtonsList
-			key={btnProps.id}
-			label={btnProps.label}
-			name={btnProps.name}
-			icons={btnProps.icon}
-			link={btnProps.link}
-			btn_color={btnProps.color}
+			key={props.id}
+			label={props.label}
+			name={props.name}
+			icons={props.icon}
+			link={props.link}
+			btn_color={props.color}
 		/>
 	));
 
