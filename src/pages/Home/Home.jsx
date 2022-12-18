@@ -23,8 +23,6 @@ export default function Home() {
 			.then(data => setData(data));
 	}, []);
 
-	console.log(isData);
-
 	const content = {
 		title: isData?.content.title,
 		name_title: isData?.content.name_title,
