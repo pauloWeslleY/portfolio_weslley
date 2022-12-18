@@ -13,6 +13,8 @@ import { ButtonTop } from '../../components/ButtonToTop';
 
 import { ScrollReveal } from '../../hooks/useScrollReveal';
 
+import { CONTENT_PROPS, FOOTER_PROPS } from '../../data/content_[prop]';
+
 export default function Home() {
 	const [isData, setData] = useState();
 
@@ -47,13 +49,13 @@ export default function Home() {
 		<main>
 			<header>
 				<ScrollReveal>
-					<NavMenu title={content.title} />
+					<NavMenu title={isData ? content.title : CONTENT_PROPS.title} />
 				</ScrollReveal>
 				<Head
-					title={content.name_title}
-					name={content.name}
-					description={content.description}
-					button_title={content.btn_title}
+					title={isData ? content.name_title : CONTENT_PROPS.name_title}
+					name={isData ? content.name : CONTENT_PROPS.name}
+					description={isData ? content.description : CONTENT_PROPS.description}
+					button_title={isData ? content.btn_title : CONTENT_PROPS.btn_title}
 				/>
 			</header>
 
@@ -65,10 +67,13 @@ export default function Home() {
 
 			<section>
 				<Social />
-				<Portfolio title={content.portfolio} subtitle={content.projects_recent} />
-				<Skills title={content.skills} />
-				<About title={content.about} />
-				<Contact title={content.contact} />
+				<Portfolio
+					title={isData ? content.portfolio : CONTENT_PROPS.portfolio}
+					subtitle={isData ? content.projects_recent : CONTENT_PROPS.projects_recent}
+				/>
+				<Skills title={isData ? content.skills : CONTENT_PROPS.skills} />
+				<About title={isData ? content.about : CONTENT_PROPS.about} />
+				<Contact title={isData ? content.contact : CONTENT_PROPS.contact} />
 			</section>
 
 			<Divider
@@ -79,9 +84,9 @@ export default function Home() {
 
 			<footer>
 				<Footer
-					title_footer={footer.title}
-					name_link={footer.label}
-					subtitle_footer={footer.subtitle}
+					title_footer={isData ? footer.title : FOOTER_PROPS.title}
+					name_link={isData ? footer.label : FOOTER_PROPS.label}
+					subtitle_footer={isData ? footer.subtitle : FOOTER_PROPS.subtitle}
 				/>
 			</footer>
 			<ButtonTop />

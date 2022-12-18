@@ -1,7 +1,15 @@
 import { memo, useEffect, useState } from 'react';
 import { Container, Flex, useMediaQuery } from '@chakra-ui/react';
 import axios from 'axios';
-import { AboutContent, AboutProfile, HeadTitle, Wrapper, ScrollReveal, useColors } from './index';
+import {
+	AboutContent,
+	AboutProfile,
+	HeadTitle,
+	Wrapper,
+	ScrollReveal,
+	useColors,
+	ABOUT_PROPS,
+} from './index';
 
 import styles from './About.module.scss';
 
@@ -50,18 +58,18 @@ export const About = ({ title }) => {
 							flexDirection={'row'}
 						>
 							<AboutContent
-								name={about.name}
+								name={data ? about.name : ABOUT_PROPS.name}
 								img={'/images/paulo-wes.jpg'}
-								description={about.description}
-								description2={about.description2}
-								description3={about.description3}
+								description={data ? about.description : ABOUT_PROPS.description}
+								description2={data ? about.description2 : ABOUT_PROPS.description2}
+								description3={data ? about.description3 : ABOUT_PROPS.description3}
 							/>
 
 							<AboutProfile
-								name={about.name}
-								title={about.title}
+								name={data ? about.name : ABOUT_PROPS.name}
+								title={data ? about.title : ABOUT_PROPS.title}
 								img={'/images/avatar_profile.jpg'}
-								job={about.job}
+								job={data ? about.jog : ABOUT_PROPS.job}
 							/>
 						</Flex>
 					</ScrollReveal>
