@@ -7,7 +7,7 @@ export const Portfolio = ({ title, subtitle }) => {
 
 	return (
 		<Container maxW={'1545px'}>
-			<Flex id={'project'} direction={isNotSmallerScreen ? 'row' : 'column'} py={'2rem'}>
+			<Flex id={'project'} direction={isNotSmallerScreen ? 'row' : 'column'} py={'3rem'}>
 				<ScrollReveal>
 					<HeadTitle title={title} subtitle={subtitle} />
 				</ScrollReveal>

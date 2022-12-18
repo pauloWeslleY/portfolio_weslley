@@ -19,7 +19,7 @@ import { IoClose } from 'react-icons/io5';
 
 import { useColors, NAV_ITEMS } from './index';
 
-export const SideNav = ({ name, lastName }) => {
+export const SideNav = ({ name, last_name }) => {
 	const { THEME } = useColors();
 	const mobileNav = useDisclosure();
 
@@ -79,7 +79,7 @@ export const SideNav = ({ name, lastName }) => {
 						<Flex justify={'center'} alignItems={'center'} gap={3}>
 							<Avatar bg={'transparent'} name={'Logo Icon'} src={'/favicon.png'} />{' '}
 							<Heading>
-								{name} <chakra.span>{lastName}</chakra.span>
+								{name} <chakra.span>{last_name}</chakra.span>
 							</Heading>
 							<IconButton
 								aria-label={'Close menu'}

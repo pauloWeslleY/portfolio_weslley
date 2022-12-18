@@ -19,9 +19,6 @@ const colors = {
    bg_dark: "var(--bg-dark)",
    bg_light: "var(--bg-light)",
 
-   green: {
-      50: 'var(--green-10)',
-   },
 
    white: {
       50: "var(--white-50)",
@@ -30,6 +27,9 @@ const colors = {
       200: "var(--white-200)",
       300: "var(--white-300)",
       400: "var(--white-400)",
+   },
+   green: {
+      50: 'var(--green-10)',
    },
    gray: {
       20: "var(--gray-20)",
@@ -44,9 +44,9 @@ const colors = {
       600: "var(--gray-600)",
       700: "var(--gray-700)",
       800: "var(--gray-800)",
+      850: "var(--gray-2000)",
       900: "var(--gray-900)",
       950: "var(--gray-1000)",
-      850: "var(--gray-2000)",
    },
    red: {
       10: "var(--red-10)",
