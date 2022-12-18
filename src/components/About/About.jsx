@@ -69,7 +69,7 @@ export const About = ({ title }) => {
 								name={data ? about.name : ABOUT_PROPS.name}
 								title={data ? about.title : ABOUT_PROPS.title}
 								img={'/images/avatar_profile.jpg'}
-								job={data ? about.jog : ABOUT_PROPS.job}
+								job={data ? about.job : ABOUT_PROPS.job}
 							/>
 						</Flex>
 					</ScrollReveal>
