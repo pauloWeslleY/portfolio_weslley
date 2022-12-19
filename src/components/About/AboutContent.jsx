@@ -28,7 +28,7 @@ export const AboutContent = props => {
 				mt={-16}
 			>
 				<Image
-					alt={'Foto do Desenvolvedor deste Site'}
+					alt={'Foto do Desenvolvedor deste Site Weslley Lima'}
 					src={image}
 					w={20}
 					h={20}

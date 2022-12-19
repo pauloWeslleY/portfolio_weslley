@@ -25,7 +25,12 @@ export const Banner = () => {
 				overflow={'hidden'}
 			>
 				<ScrollReveal>
-					<Image alt={'Hero Image'} fit={'cover'} align={'center'} src={LogoBanner} />
+					<Image
+						alt={'Imagem do Banner do Site Weslley Lima'}
+						fit={'cover'}
+						align={'center'}
+						src={LogoBanner}
+					/>
 				</ScrollReveal>
 			</Box>
 		</section>

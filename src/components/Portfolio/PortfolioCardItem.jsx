@@ -61,6 +61,7 @@ export function PortfolioCardItem(props) {
 						filter: 'blur(20px)',
 					},
 				}}
+				alt={'Imagens do Sites Desenvolvido por Weslley de Lima'}
 			>
 				<Link onClick={onOpen}>
 					<Image rounded={'lg'} height={230} width={282} objectFit={'cover'} src={image} />

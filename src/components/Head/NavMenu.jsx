@@ -46,6 +46,7 @@ export const NavMenu = ({ title }) => {
 				<IconButton
 					key={id}
 					textAlign={'center'}
+					role={'button'}
 					arial-label={name}
 					color={color}
 					icon={icon}
@@ -81,6 +82,8 @@ export const NavMenu = ({ title }) => {
 				<Spacer></Spacer>
 				{NavIcon()}
 				<Switch
+					aria-label={'Botão que alterna o tema deste site.'}
+					label={'button'}
 					size={'lg'}
 					colorScheme={'cyan'}
 					isChecked={isDark}

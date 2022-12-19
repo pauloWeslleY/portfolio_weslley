@@ -28,6 +28,7 @@ export const AboutProfile = ({ image, work, title }) => {
 				style={{
 					backgroundImage: `url(${image})`,
 				}}
+				alt={'Imagem do Desenvolvedor desde Site Weslley Lima'}
 			></Box>
 			<Box
 				w={{

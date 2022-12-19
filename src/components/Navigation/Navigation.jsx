@@ -48,7 +48,11 @@ export const Navigation = () => {
 						justifyContent={'space-between'}
 					>
 						<Flex gap={2} align={'center'}>
-							<Avatar name={'Logotipo da Página'} bg={'transparent'} src={'./favicon.png'} />{' '}
+							<Avatar
+								name={'Logotipo da Página desde site'}
+								bg={'transparent'}
+								src={'./favicon.png'}
+							/>{' '}
 							<Heading as={'h3'}>
 								{titles.name} <chakra.span>{titles.lastName}</chakra.span>
 							</Heading>
