@@ -25,16 +25,6 @@ export const About = ({ title }) => {
 			.then(data => setData(data));
 	}, []);
 
-	const about = {
-		name: data?.content.name,
-		title: data?.content.label,
-		work: data?.content.work,
-
-		description: data?.content.description,
-		description2: data?.content.description2,
-		description3: data?.content.description3,
-	};
-
 	return (
 		<Container maxW={'1545px'}>
 			<Flex id={'about'} direction={isNotSmallerScreen ? 'row' : 'column'} py={'3rem'}>
@@ -53,17 +43,17 @@ export const About = ({ title }) => {
 							flexDirection={'row'}
 						>
 							<AboutContent
-								name={data ? about.name : ABOUT_PROPS.name}
+								name={data ? data?.content.name : ABOUT_PROPS.name}
 								image={'/images/paulo-wes.jpg'}
-								description={data ? about.description : ABOUT_PROPS.description}
-								description2={data ? about.description2 : ABOUT_PROPS.description2}
-								description3={data ? about.description3 : ABOUT_PROPS.description3}
+								description={data ? data?.content.description : ABOUT_PROPS.description}
+								description2={data ? data?.content.description2 : ABOUT_PROPS.description2}
+								description3={data ? data?.content.description3 : ABOUT_PROPS.description3}
 							/>
 
 							<AboutProfile
 								image={'/images/avatar_profile.jpg'}
-								title={data ? about.title : ABOUT_PROPS.title}
-								work={data ? about.work : ABOUT_PROPS.job}
+								title={data ? data?.content.label : ABOUT_PROPS.title}
+								work={data ? data?.content.work : ABOUT_PROPS.job}
 							/>
 						</Flex>
 					</ScrollReveal>

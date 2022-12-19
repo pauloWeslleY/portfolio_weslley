@@ -85,9 +85,9 @@ export default function Home() {
 
 			<footer>
 				<Footer
-					name={isData ? footer.name : FOOTER_PROPS.name}
-					label={isData ? footer.label : FOOTER_PROPS.label}
-					sub_label={isData ? footer.sub_label : FOOTER_PROPS.sub_label}
+					name={isData ? isData?.footer.name : FOOTER_PROPS.name}
+					label={isData ? isData?.footer.label : FOOTER_PROPS.label}
+					sub_label={isData ? isData?.footer.sub_label : FOOTER_PROPS.sub_label}
 					link={isData ? footer.link : FOOTER_PROPS.link}
 				/>
 			</footer>
