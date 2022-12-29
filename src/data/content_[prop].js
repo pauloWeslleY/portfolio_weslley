@@ -25,9 +25,10 @@ const ABOUT_PROPS = {
 };
 
 const FOOTER_PROPS = {
-	title: 'Created by',
-	label: 'Weslley Lima',
-	subtitle: '© copyright 2022. Paulo Weslley de Lima Firmino - Todos os Direitos Reservados.',
+	label: 'Created by',
+	name: 'Weslley Lima',
+   copyright: '© copyright 2022. Paulo Weslley de Lima Firmino - Todos os Direitos Reservados.',
+   link: "https://www.linkedin.com/in/paulo-weslley-de-lima-firmino-17851a17b/"
 };
 
 export { ABOUT_PROPS, CONTENT_PROPS, FOOTER_PROPS };

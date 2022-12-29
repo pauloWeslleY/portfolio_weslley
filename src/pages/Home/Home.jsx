@@ -1,6 +1,4 @@
-import { useState, useEffect } from 'react';
 import { Divider } from '@chakra-ui/react';
-import axios from 'axios';
 
 import { Head, NavMenu } from '../../components/Head';
 import { Social } from '../../components/Social';
@@ -16,47 +14,17 @@ import { ScrollReveal } from '../../hooks/useScrollReveal';
 import { CONTENT_PROPS, FOOTER_PROPS } from '../../data/content_[prop]';
 
 export default function Home() {
-	const [isData, setData] = useState();
-
-	useEffect(() => {
-		axios
-			.get('http://localhost:3333/')
-			.then(response => response.data)
-			.then(data => setData(data));
-	}, []);
-
-	const content = {
-		title: isData?.content.title,
-		name_title: isData?.content.name_title,
-		name: isData?.content.name,
-		description: isData?.content.description,
-		btn_title: isData?.content.btn_title,
-		portfolio: isData?.content.project,
-		projects_recent: isData?.content.projects_recent,
-		subtitle: isData?.content.subtitle,
-		skills: isData?.content.skills,
-		about: isData?.content.about,
-		contact: isData?.content.contact,
-	};
-
-	const footer = {
-		label: isData?.footer.label,
-		name: isData?.footer.name,
-		sub_label: isData?.footer.sub_label,
-		link: isData?.footer.link,
-	};
-
 	return (
 		<main>
 			<header>
 				<ScrollReveal>
-					<NavMenu title={isData ? content.title : CONTENT_PROPS.title} />
+					<NavMenu title={CONTENT_PROPS.title} />
 				</ScrollReveal>
 				<Head
-					title={isData ? content.name_title : CONTENT_PROPS.name_title}
-					name={isData ? content.name : CONTENT_PROPS.name}
-					description={isData ? content.description : CONTENT_PROPS.description}
-					button_title={isData ? content.btn_title : CONTENT_PROPS.btn_title}
+					title={CONTENT_PROPS.name_title}
+					name={CONTENT_PROPS.name}
+					description={CONTENT_PROPS.description}
+					button_title={CONTENT_PROPS.btn_title}
 				/>
 			</header>
 
@@ -68,13 +36,10 @@ export default function Home() {
 
 			<section>
 				<Social />
-				<Portfolio
-					title={isData ? content.portfolio : CONTENT_PROPS.portfolio}
-					subtitle={isData ? content.projects_recent : CONTENT_PROPS.projects_recent}
-				/>
-				<Skills title={isData ? content.skills : CONTENT_PROPS.skills} />
-				<About title={isData ? content.about : CONTENT_PROPS.about} />
-				<Contact title={isData ? content.contact : CONTENT_PROPS.contact} />
+				<Portfolio title={CONTENT_PROPS.project} subtitle={CONTENT_PROPS.projects_recent} />
+				<Skills title={CONTENT_PROPS.skills} />
+				<About title={CONTENT_PROPS.about} />
+				<Contact title={CONTENT_PROPS.contact} />
 			</section>
 
 			<Divider
@@ -85,10 +50,10 @@ export default function Home() {
 
 			<footer>
 				<Footer
-					name={isData ? isData?.footer.name : FOOTER_PROPS.name}
-					label={isData ? isData?.footer.label : FOOTER_PROPS.label}
-					sub_label={isData ? isData?.footer.sub_label : FOOTER_PROPS.sub_label}
-					link={isData ? footer.link : FOOTER_PROPS.link}
+					name={FOOTER_PROPS.name}
+					label={FOOTER_PROPS.label}
+					sub_label={FOOTER_PROPS.copyright}
+					link={FOOTER_PROPS.link}
 				/>
 			</footer>
 			<ButtonTop />
